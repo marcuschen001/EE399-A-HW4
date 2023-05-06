@@ -20,6 +20,8 @@ Similar to the aforementioned project, the first 20 data points are used as the 
 
 In the second part of this project, the MNIST dataset from Project 3 is used:
 
+https://www.openml.org/search?type=data&sort=runs&id=554&status=active
+
 The data is first computed for the first 20 PCA modes, and then an FFNN is created customized to the data to classify the digits. The results of the FFNN are then compared to similar results using a long short-term memory neural network (LSTM) and the models used in Project 3: the SVM and the decision tree. 
 
 ### Theoretical Background:
@@ -67,7 +69,11 @@ $\vec{W_{k+1}}=\vec{W_k}-\delta \nabla E$
 where $\delta$ refers to the learning rate and $\nabla E$ is the gradient descent, or the iterative optimization algorithm to find a local minimum.
 
 #### Long Short-term Memory Neural Network (LSTM): 
-A recurrent neural network (RNN) with feedback connections
+A special kind of recurrent neural network (RNN) with feedback connections, unlike the standard FFNN. LSTM's can be able to create an additional module that learns when to remember and when to forget pertinent information.
+
+![LSTM_Cell](https://user-images.githubusercontent.com/66970342/236602901-e0ce4b63-7293-49b5-ae87-b5978b62b02f.png)
+
+A hidden state $h_t$ and a cell state $c_t$ are computed and used to determine an output based on a set of input data.
 
 ### Algorithm Interpretation and Development:
 In order to create the FFNN’s for our data, we use pytorch. The design of the network itself is done like so:
