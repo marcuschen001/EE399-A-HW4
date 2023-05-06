@@ -35,17 +35,18 @@ The layers that impose transformations between the input and output layers
 An adaptation of biological neurons, they determine the sum of weighted inputs and initiate an activation function to normalize the sum
 ##### Activation Functions: 
 The functions that create linear or nonlinear transformations for the data being processed. It is very important to pick activation functions that are easy to differentiate.
-###### Examples of Activation Functions:
-####### Linear:
+
+Examples of Activation Functions:
+###### Linear:
 $f(x)=ax+b$
 
-####### Binary Step:
+###### Binary Step:
 $f(x)=u(x-n)$
 
-####### Sigmoid:
+###### Sigmoid:
 $f(x)=\frac{1}{1+e^{-x}}$
 
-####### ReLU:
+###### ReLU:
 $f(x)=xu(x-n)$
 
 ##### Weights: 
@@ -184,7 +185,7 @@ Linear Model: 2.242749387090776, 3.363619366080294
 Parabolic Model: 2.1255393483520155, 8.71366660302094
 19th degree polynomial model: 0.028351481277572182, 28626352734.19632
 ```
-the training mean square error is worse than all the ones using traditional models. The FFNN has a larger error than the linear model when predicting the testing data, but beats the parabolic and polynomial model by over 3 and millions respectively, and remains consistent with the training value.
+the training mean square error is worse than all the ones using traditional models. The FFNN has a larger error than the linear model when predicting the testing data by a factor of 1.5, but beats the parabolic and polynomial model by over 3 and millions respectively, and remains consistent with the training value.
 
 Based on a FFNN model going over 100 epochs using the first 10 and last 10 points as training data the results are, 
 ```
@@ -197,7 +198,7 @@ Linear Model: 1.8516699046029184, 2.73091076355018
 Parabolic Model: 1.8508364117779978, 2.7052339602955877
 19th degree polynomial model: 532.5689882067522, 463.31672158927245
 ```
-the training mean square error is better than the polynomial, but worse than the linear and parabolic models. The FFNN has a larger error than the linear and the parabolic model, but is still much better than the polynomial model. 
+the training mean square error is better than the polynomial by a factor of over 157, but worse than the linear and parabolic models by a factor of 2. The FFNN has a larger error on the test data than the linear and the parabolic model by a factor of almost 3, but is still much better than the polynomial model by a factor of 60. 
 
 By using a FFNN to predict classifications for the MNIST dataset, after 10 epochs these are the results:
 ```
