@@ -36,16 +36,16 @@ An adaptation of biological neurons, they determine the sum of weighted inputs a
 ##### Activation Functions: 
 The functions that create linear or nonlinear transformations for the data being processed. It is very important to pick activation functions that are easy to differentiate.
 ###### Examples of Activation Functions:
-Linear:
+####### Linear:
 $f(x)=ax+b$
 
-Binary Step:
+####### Binary Step:
 $f(x)=u(x-n)$
 
-Sigmoid:
+####### Sigmoid:
 $f(x)=\frac{1}{1+e^{-x}}$
 
-ReLU:
+####### ReLU:
 $f(x)=xu(x-n)$
 
 ##### Weights: 
@@ -65,8 +65,8 @@ $\vec{W_{k+1}}=\vec{W_k}-\delta \nabla E$
 
 where $\delta$ refers to the learning rate and $\nabla E$ is the gradient descent, or the iterative optimization algorithm to find a local minimum.
 
-##### Long Short-term Memory Neural Network (LSTM): 
-A neural network with feedback connections making it a recurrent neural network (RNN)
+#### Long Short-term Memory Neural Network (LSTM): 
+A recurrent neural network (RNN) with feedback connections
 
 ### Algorithm Interpretation and Development:
 In order to create the FFNN’s for our data, we use pytorch. The design of the network itself is done like so:
